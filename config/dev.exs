@@ -68,8 +68,17 @@ config :phoenix, :plug_init_mode, :runtime
 
 # Configure your database
 config :phx_liveview_test, PhxLiveviewTest.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "wsurapat",
+  password: "",
   database: "phx_liveview_test_dev",
   hostname: "localhost",
   pool_size: 10
+
+
+config :phx_liveview_test, MyAppWeb.Endpoint,
+  live_reload: [
+    patterns: [
+      ...,
+      ~r{lib/my_app_web/live/.*(ex)$}
+    ]
+  ]

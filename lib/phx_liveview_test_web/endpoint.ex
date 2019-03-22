@@ -43,4 +43,6 @@ defmodule PhxLiveviewTestWeb.Endpoint do
     signing_salt: "f9AnjQoK"
 
   plug PhxLiveviewTestWeb.Router
+
+  socket "/live", Phoenix.LiveView.Socket
 end
